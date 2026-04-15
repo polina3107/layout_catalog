@@ -1,11 +1,11 @@
 .card {
-  width: 200px;
+  width: $card-width;
   border: 1px solid $card-border-color;
   box-sizing: border-box;
 
-  transition: 300ms;
+  transition: $hover-transition;
 
-  &__name {
+  &__title {
     margin: 0;
     font-weight: 500;
     font-size: $medium-font-size;
@@ -15,8 +15,11 @@
   &:hover {
     transform: scale(1.2);
     cursor: pointer;
-    .card__name {
-      color: #34568b;
+    .card__title {
+      transition: color $hover-transition;
+      color: $hover-color;
+      transform-origin: center;
+      z-index: 1;
     }
   }
 
@@ -96,6 +99,7 @@
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: none;
+      transition: $hover-transition;
 
       &:hover {
         box-sizing: border-box;
