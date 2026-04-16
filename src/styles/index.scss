@@ -17,7 +17,7 @@ body {
   --column-card-count: 1;
 
   display: grid;
-  grid-template-columns: repeat(var(--column-card-count), 200px);
+  grid-template-columns: repeat(var(--column-card-count), $card-width);
   gap: $card-gap;
   padding: $catalog-padding;
   justify-content: center;

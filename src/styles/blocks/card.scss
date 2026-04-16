@@ -10,16 +10,16 @@
     font-weight: 500;
     font-size: $medium-font-size;
     margin-top: $margin-top-proportion * 10;
+    transition: color $hover-transition;
   }
 
   &:hover {
+    transform-origin: center;
+    z-index: 1;
     transform: scale(1.2);
     cursor: pointer;
     .card__title {
-      transition: color $hover-transition;
       color: $hover-color;
-      transform-origin: center;
-      z-index: 1;
     }
   }
 
